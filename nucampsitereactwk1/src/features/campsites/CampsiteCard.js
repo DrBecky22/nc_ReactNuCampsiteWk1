@@ -9,9 +9,11 @@ const CampsiteCard = (props) => {
             alt={props.campsite.name}
             />
 
-            <CardImgOverlay
-                <CardTitle>{props.campsite.name</CardTitle>;
-            />
+            <CardImgOverlay>
+                <CardTitle>{props.campsite.name}</CardTitle>;
+            </CardImgOverlay>
+                
+        
 
         </Card>
     )

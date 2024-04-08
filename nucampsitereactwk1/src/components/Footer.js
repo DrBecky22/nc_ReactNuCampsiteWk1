@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'reactstrap';
-import NucampLogo from './app/assets/img/logo.png';
+
 
 const Footer = () => {
     return (

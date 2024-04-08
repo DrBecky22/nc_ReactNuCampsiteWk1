@@ -1,5 +1,5 @@
 import { Navbar, NavbarBrand } from 'reactstrap';
-import NuCampLogo from '../app/assets/img/logo.png';
+import NucampLogo from '../app/assets/img/logo.png';
 
 const Header = () => {
     return (
