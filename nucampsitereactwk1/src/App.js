@@ -1,6 +1,6 @@
-import Header from './components.Header';
+import Header from './components/Header';
 import CampsitesList from './features/campsites/CampsitesList.js';
-import Footer from './components.Footer';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
