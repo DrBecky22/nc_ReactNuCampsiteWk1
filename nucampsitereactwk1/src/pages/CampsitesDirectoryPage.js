@@ -4,7 +4,6 @@ import CampsitesList from '../features/campsites/CampsitesList';
 import { selectCampsiteById } from '../features/campsites/campsitesSlice';
 import {useState} from 'react';
 
-
 const CampsitesDirectoryPage = () => {
     // let selectedCampsite = selectRandomCampsite();
         
@@ -19,12 +18,9 @@ const CampsitesDirectoryPage = () => {
 
     return (
         <Container>
-            {/* <Button onClick={() => toggleCampsite(selectRandomCampsite())}>
-                Select Random Campsite
-            </Button> */}
             <Row>
                 <Col sm='5' md='7'>
-                    <CampsitesList />
+                    <CampsitesList setCampsiteID={{setCampsiteId}} />
                 </Col>
 
                 <Col sm='7' md='5'>
