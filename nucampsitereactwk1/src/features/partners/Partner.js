@@ -1,5 +1,10 @@
-const Partner =  if (partner) => {
-    let { image, name, description } = partner
+
+
+
+const Partner = ({ partner }) => {
+    
+    if (partner) {
+        const { image, name, description } = partner;
         return (
             <>
                 <img src={image} alt={name} style={{ width: '150px'}} />
@@ -8,7 +13,9 @@ const Partner =  if (partner) => {
                     {description}
                 </div>
             </>
-         )
+        )
+    }
+    return null;
 }
 
 export default Partner.js
