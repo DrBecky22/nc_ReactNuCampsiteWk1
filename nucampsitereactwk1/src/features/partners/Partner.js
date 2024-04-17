@@ -1,6 +1,3 @@
-
-
-
 const Partner = ({ partner }) => {
     
     if (partner) {
