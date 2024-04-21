@@ -1,18 +1,18 @@
 import useState from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
-const CommentForm = (campsiteID) => {
+const CommentForm = ({campsiteId}) => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    const handleSubmit = (values) => {
-        campsiteId: parseInt(campsiteId),
-        rating: values.rating,
-        author: values.author,
-        text: values.commentText;
-
-        console.log(values.comment);
-        setModalOpen = false;
-    }
+    // const handleSubmit = (values) => {
+    //     const comment = {campsiteId: parseInt(campsiteId),
+    //     rating: values.rating,
+    //     author: values.author,
+    //     text: values.commentText
+    // }
+    //     console.log(comment);
+    //     setModalOpen(false) ;
+    // }
 
     return (
         <>
@@ -26,7 +26,7 @@ const CommentForm = (campsiteID) => {
                 </ModalHeader>
 
                 <ModalBody>
-                    campsite: {campsiteID}
+                    campsite: {campsiteId}
                 </ModalBody>
             </Modal>
         </>
