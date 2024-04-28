@@ -11,7 +11,7 @@ import {
 } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import defaultAvatar from '../../app/assets/img/unicorn.png';
-import validateUserLoginForm from '../../utils/validateUserLoginForm';
+import { validateUserLoginForm } from '../../utils/validateUserLoginForm';
 
 
 const UserLoginForm = () => {
@@ -30,6 +30,7 @@ const UserLoginForm = () => {
 
         dispatch(setCurrentUser(currentUser));
         setLoginModalOpen(false);
+    }
 
         return (
             <>
@@ -59,7 +60,7 @@ const UserLoginForm = () => {
                 </ModalHeader>
 
                 <ModalBody>
-                    <Formik initialValues={ username: '', password: '' } onSubmit={ handleLogin} validate={validateUserLoginForm}>
+                    <Formik initialValues={{ username: '', password: '' }} onSubmit={ handleLogin} validate={validateUserLoginForm}>
                         <Form>
                             <FormGroup> 
                                 <Label htmlFor='username'>Username</Label>
@@ -70,17 +71,19 @@ const UserLoginForm = () => {
                             </FormGroup>
                             <FormGroup>
                             <Label htmlFor='password'>Password</Label>
-                                <Field id='password' name='username' placeholder='Password' className='form-control' />
+                                <Field id='password' name='password' placeholder='Password' className='form-control' />
                                 <ErrorMessage name='password'>
                                     {(msg) => <p className='text-danger'>{msg}</p>}
+                                </ErrorMessage>
                             </FormGroup>
                             <Button type='submit' color='primary'>Login</Button>
                         </Form>
+                    </Formik>
                 </ModalBody>
             </Modal>
             </>   
         )
     }
-}
+
 
 export default UserLoginForm;
