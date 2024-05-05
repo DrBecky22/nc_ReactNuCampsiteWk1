@@ -19,10 +19,10 @@ const CommentForm = ({campsiteId}) => {
         text: values.commentText, 
         date: new Date(Date.now()).toISOString() 
         };
-    };
         console.log(comment);
         setModalOpen(false) ;
         dispatch(postComment(comment));
+    };
 
     return (
         <>

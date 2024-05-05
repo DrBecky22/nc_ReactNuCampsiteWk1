@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { baseUrl } from '../../app/shared/baseURL';
 // import { COMMENTS } from '../../app/shared/oldData/COMMENTS';
 
+
 export const fetchComments = createAsyncThunk(
     'comments/fetchComments',
     async () => {
@@ -27,10 +28,11 @@ export const postComment = createAsyncThunk(
             return Promise.reject('Unable to post, status: ' + response.status);
         }
         const data = await response.json();
+        dispatch(addComment(data))
         return data;
     }
 
-    dispatch(addComment(data))
+    
 );
 
 const initialState = {
@@ -60,7 +62,7 @@ const commentsSlice = createSlice({
         [fetchComments.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
-            state.commentsArray = mapImageURL(action.payload);
+            state.commentsArray = (action.payload);
         },
         [fetchComments.rejected]: (state, action) => {
             state.isLoading = false;
